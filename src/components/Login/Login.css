@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.page{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.cover{
+    background-color: white;
+    width: 25em;
+    height: 25em;
+    position: relative;
+    border-radius: 1em;
+    box-shadow: 0 0.188em 1.550em rgb(253, 253, 253);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.inp{
+    font-size: 16px;
+    border: none;
+    background-color: rgb(229, 226, 226);
+    height: 2.5em;
+    width: 80%;
+    border-radius: 0.25em;
+    text-align: center;
+    padding: 1.5em;
+}
+
+.inp:focus{
+    outline-color: rgb(32, 177, 255);
+}
+
+.login-btn{
+    width: 40%;
+    height: 2.5em;
+    background-color: rgb(32, 177, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    border-radius: 0.25em;
+    cursor: pointer;
+}
+
+.login-btn:hover{
+    transform: scale(1.15);
+    background-color: blue;
+}
+
+.hide{
+    position: absolute;
+    transform: scale(0);
+}
+
+.log{
+    text-decoration: none;
+    color: black;
+}
+
+.login-popup{
+    position: absolute;
+    height: 25em;
+    width: 25em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1em;
+    background-color: red;
+    color: white;
+    bottom: 0;
+    transform: scale(1);
+    transition: 1.5s;
+}

@@ -1,0 +1,60 @@
+.modal-wrapper{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(189, 189, 189, 0.9);
+}
+
+.modal-container{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 30rem;
+    background-color: rgb(91, 91, 253);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 0 auto;
+    border: 2px solid black;
+    box-shadow: 6px 6px 8px black;
+}
+
+.head{
+    font-size: 2rem;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.para{
+    font-size: 1.2rem;
+    margin: 1rem 0 1rem 0;
+    line-height: 1.8rem;
+    color: white;
+    font-weight: 400;
+    font-family: "Source Serif Pro", serif;
+}
+
+.okay-btn, .cancel-btn{
+    background-color: #1A1A40;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 5px;
+    margin: 0.5rem 1rem;
+    color: white;
+    border: 0;
+    transition: 0.25s;
+    font-size: 16px;
+}
+
+.cancel-btn{
+    background-color: #1A1A40;
+}
+
+.okay-btn:hover, .cancel-btn:hover{
+    transform: scale(1.10);
+}

@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.request-wrapper{
+    background: #1A1A40;
+    margin: 16px;
+    margin-top: 100px;
+    padding: 1.5rem;
+    border-radius: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.request{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background: #8758ff; */
+    background: rgb(91, 91, 253);
+    color: #fff;
+    padding: 0.75rem 1rem;
+    border-radius: 5px;
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.nothing{
+    background-color: white;
+    color: black;
+}
+
+.headi{
+    background-color: rgb(91, 91, 253);
+    color: #fff;
+}
+
+.amt{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.ind{
+    display: flex;
+    height: 100%;
+    flex:8
+}
+.indi{
+    text-decoration: none;
+    margin: 0 0.5rem;
+    color: white;
+}
+
+.btns{
+    flex:1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.approved, .reject{
+    padding: 5px 10px;
+    background-color: green;
+    border-radius: 5px;
+    margin: 0 5px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.reject{
+    background-color: red;
+}
+
+.approved:hover, .reject:hover{
+    transform: scale(1.10);
+}
+
+.detpar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.triangle{
+    width: 0; 
+    height: 0; 
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid rgb(91, 91, 253);
+}
+
+.details{
+    max-width: 50%;
+    background-color: rgb(91, 91, 253);
+    margin: auto;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 12px;
+}
+
+.details p{
+    padding: 8px 8px;
+    background-color: #1A1A40;
+    border-radius: 5px;
+    color: white;
+    margin: 16px 16px;
+}
+  

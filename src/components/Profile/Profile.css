@@ -1,0 +1,51 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner-container{
+    margin: 2rem;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    background: rgb(91, 91, 253) ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.heading{
+    font-size: 56px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 12px;
+}
+
+.img{
+    height: 140px;
+    width:140px;
+}
+
+.logout{
+    padding: 8px 16px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    margin: 1rem 0 0 0;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.logout:hover{
+    transform: scale(1.10);
+}
+
+.uinfo{
+    font-size: 20px;
+    margin: 8px;
+    color: white;
+    font-weight: 400;
+}
