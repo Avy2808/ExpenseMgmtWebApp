@@ -12,7 +12,7 @@ const Navbar = () => {
 
   return (
     <div className='nav' id='myDIV'>
-      <Link to='/profile' className='btn'><img src={Logo} className='logo' alt='Logo'/></Link>
+      <Link to='/' className='btn'><img src={Logo} className='logo' alt='Logo'/></Link>
       {usr.usr_level==='0' && <Link to='/compm' className='btn'>Company Master</Link>}
       {usr.usr_level==='0' && <Link to='/sitem' className='btn'>Site Master</Link>}
       {usr.usr_level==='0' && <Link to='/userm' className='btn'>User Master</Link>}

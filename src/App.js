@@ -58,7 +58,7 @@ function App() {
         <>
         <Navbar/>
         <Routes>
-          <Route exact path="/profile" element={<Profile/>} />
+          <Route exact path="/" element={<Profile/>} />
           <Route exact path="/compm" element={<CompanyMaster/>} />
           <Route exact path="/sitem" element={<SiteMaster/>} />
           <Route exact path="/userm" element={<UserMaster/>} />
