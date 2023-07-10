@@ -20,8 +20,8 @@ const Request = ({datai, id, acc, rej, total, settotal}) => {
       return ()=>unsubscribe()
     }, [datai])
 
-    const tempApprove=async(e)=>{
-      if(e.target.value==='True'){
+    const tempApp=async(e)=>{
+      if(e.target.value==='Approve'){
         var index=acc.indexOf(id);
         if(index<=-1){
           settotal(total+parseInt(datai.exp_amt));
@@ -32,34 +32,49 @@ const Request = ({datai, id, acc, rej, total, settotal}) => {
           rej.splice(id, 1);
         }
       }
-      else{
+      else if(e.target.value==='Reject'){
         var inde=acc.indexOf(id);
         if(inde>-1){
           settotal(total-parseInt(datai.exp_amt));
           acc.splice(id, 1);
         }
-      }
-    }
-
-    const tempReject=async(e)=>{
-      if(e.target.value==='True'){
-        var index=rej.indexOf(id);
-        if(index<0){
+        var indr=rej.indexOf(id);
+        if(indr<=-1){
           rej.push(id);
-        }
-        var ind=acc.indexOf(id);
-        if(ind>-1){
-          settotal(total-parseInt(datai.exp_amt));
-          acc.splice(id, 1);
         }
       }
       else{
-        var indi=rej.indexOf(id);
-        if(indi>-1){
+        var inda=acc.indexOf(id);
+        if(inda>-1){
+          settotal(total-parseInt(datai.exp_amt));
+          acc.splice(id, 1);
+        }
+        var indre=rej.indexOf(id);
+        if(indre>-1){
           rej.splice(id, 1);
         }
       }
     }
+
+    // const tempReject=async(e)=>{
+    //   if(e.target.value==='True'){
+    //     var index=rej.indexOf(id);
+    //     if(index<0){
+    //       rej.push(id);
+    //     }
+    //     var ind=acc.indexOf(id);
+    //     if(ind>-1){
+    //       settotal(total-parseInt(datai.exp_amt));
+    //       acc.splice(id, 1);
+    //     }
+    //   }
+    //   else{
+    //     var indi=rej.indexOf(id);
+    //     if(indi>-1){
+    //       rej.splice(id, 1);
+    //     }
+    //   }
+    // }
 
     return (
       <>
@@ -74,15 +89,15 @@ const Request = ({datai, id, acc, rej, total, settotal}) => {
             File Link
           </a>
         </div>
-        <select className='header-cell' style={{maxWidth:"80px", paddingRight:0}} onChange={(e)=>tempApprove(e)}>
+        {/* <select className='header-cell' style={{maxWidth:"80px", paddingRight:0}} onChange={(e)=>tempApprove(e)}>
             <option className='header-cell nothing' value='None'>None</option>
             <option className='header-cell nothing' value='True'>Yes</option>
             <option className='header-cell nothing' value='False'>No</option>
-        </select>
-        <select className='header-cell' style={{maxWidth:"80px", paddingRight:0}} onChange={(e)=>tempReject(e)}>
+        </select> */}
+        <select className='header-cell' style={{maxWidth:"160px", paddingRight:0}} onChange={(e)=>tempApp(e)}>
             <option className='header-cell nothing' value='None'>None</option>
-            <option className='header-cell nothing' value='True'>Yes</option>
-            <option className='header-cell nothing' value='False'>No</option>
+            <option className='header-cell nothing' value='Approve'>Approve</option>
+            <option className='header-cell nothing' value='Reject'>Reject</option>
         </select>
         <input type='text' className='header-cell'/>
       </div>

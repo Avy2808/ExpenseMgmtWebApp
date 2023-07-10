@@ -196,8 +196,7 @@ const ExpenseApproval = () => {
             <div className='header-cell headi' style={{maxWidth:"160px"}}>Amount</div>
             <div className='header-cell headi' style={{maxWidth:"80px"}}>GST</div>
             <div className='header-cell headi'>Link</div>
-            <div className='header-cell headi' style={{maxWidth:"80px"}}>Approve</div>
-            <div className='header-cell headi' style={{maxWidth:"80px"}}>Reject</div>
+            <div className='header-cell headi' style={{maxWidth:"160px"}}>Approve/Reject</div>
             <div className='header-cell headi'>Reason for Rejection</div>
         </div>
         {lists.map((data)=>{
